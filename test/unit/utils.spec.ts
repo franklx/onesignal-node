@@ -28,7 +28,7 @@ describe('utils', () => {
   });
 
   describe('.jsonToQueryString', () => {
-    const testData = [
+    const testData: Array<[object, string]> = [
       [{}, ''],
       [{ a: 1 }, 'a=1'],
       [{ offset: '22' }, 'offset=22'],
