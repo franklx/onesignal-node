@@ -1,6 +1,6 @@
 {
   "name": "@franklx/onesignal-node",
-  "version": "4.0.0-p1",
+  "version": "4.0.0-p2",
   "description": "A Node.js Library for OneSignal push notification service",
   "engines": {
     "node": ">=8.13.0"
@@ -14,13 +14,12 @@
     "package.json"
   ],
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src test --ext .js,.ts",
-    "build": "./node_modules/.bin/tsc -b",
-    "test": "./node_modules/.bin/mocha -r ts-node/register 'test/unit/**/*.spec.ts'",
-    "test-integration": "./node_modules/.bin/mocha -r ts-node/register 'test/integration/**/*.spec.ts'",
-    "coverage": "./node_modules/.bin/nyc --reporter=lcov npm run test",
-    "update-codecov": "./node_modules/.bin/codecov",
-    "postinstall": "npm run build"
+    "lint": "eslint src test --ext .js,.ts",
+    "build": "tsc -b",
+    "test": "mocha -r ts-node/register 'test/unit/**/*.spec.ts'",
+    "test-integration": "mocha -r ts-node/register 'test/integration/**/*.spec.ts'",
+    "coverage": "nyc --reporter=lcov npm run test",
+    "update-codecov": "codecov"
   },
   "repository": {
     "type": "git",
